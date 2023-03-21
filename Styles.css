@@ -99,6 +99,7 @@ img {
 /*===== CLASS CSS ===== */
 .section {
   padding: 4rem 0 2rem;
+  margin-top: 9rem;
 }
 
 .section-title {
@@ -291,7 +292,7 @@ img {
 
 /* ===== ABOUT =====*/
 .about__container {
-  row-gap: 2rem;
+  row-gap: 2rem;;
 }
 
 .about__data {
@@ -452,21 +453,235 @@ img {
 }
 
 .education__line {
-  
+  display: block;
+  height: 90%;
+  width: 2px;
+  background-color: var(--first-color);
+  transform: translate(5px, -4px);
 }
-/* ===== SERVICES =====*/
+
+/* ===== GALLERY =====*/
+.gallery__container {
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.gallery__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.gallery__data {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(204,75,44,0.7);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
 
 
-/* ===== PROJECT IN MIND  =====*/
+.gallery__link {
+  display: inline-flex;
+  font-size: 1.5rem;
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-bottom: var(--mb-2);
+}
 
+.gallery__title {
+  font-size: var(--h2-font-size);
+  color: var(--first-color-lighten);
+}
 
-/* ===== WORKS =====*/
-
+.gallery__img:hover .gallery__data {
+  bottom: 0;
+}
 
 /* ===== CONTACT =====*/
+.contact__container {
+  row-gap: 3rem;
+}
 
+.contact__input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--first-color-light);
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-2);
+  border-radius: 0.5rem;
+}
+
+.contact ::placeholder {
+  color: var(--first-color-dark);
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+.contact__button {
+  outline: none;
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+}
+
+.contact__info {
+ margin-bottom: var(--mb-3); 
+}
+
+.contact__subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--first-color-dark);
+  margin-bottom: var(--mb-1);
+}
+
+.contact__text {
+  display: block;
+  padding: 1rem;
+}
 
 /* ===== FOOTER =====*/
+.footer {
+  background-color: var(--first-color-darken);
+  color: var(--first-color-lighten);
+  text-align: center;
+}
 
+.footer__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.footer_description {
+  margin-bottom: var(--mb-2);
+}
+
+.footer__social {
+  margin-bottom: 3rem;
+}
+
+.footer__link {
+  display: inline-flex;
+  background-color: var(--first-color);
+  color: var(--first-color-lighten);
+  font-size: 1.1rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+  margin: 0 var(--mb-1);
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+}
+
+.footer_copy {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
 
 /* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+  .home__button{
+    width: initial;
+  }
+
+  .nav__menu {
+    width: var(--nav-width);
+  }
+
+  .about__container,
+  .skills__container,
+  .gallery__container,
+  .contact__container,
+  .contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__data {
+    text-align: initial;
+  }
+
+  .about__description {
+    margin-bottom: var(--mb-5);
+  }
+
+  .about__img {
+    width: 280px;
+  }
+
+  .about__information {
+    padding-left: 4rem;
+  }
+
+  .education__time {
+    padding: 0 2rem;
+  }
+
+  .contact__inputs {
+    display: grid;
+    column-gap: 1.5rem;
+  }
+
+  .contact__info {
+    padding-left: 3rem;
+  }
+
+  .footer {
+    background: none;
+  }
+
+  .footer__container {
+    background-color: var(--first-color-darken);
+    padding: 3rem 0;
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0;
+    padding-left: var(--nav-width);
+  }
+
+  .l-header {
+    width: 0;
+  }
+
+  .nav__toggle, .nav__logo, .nav__close {
+    display: none;
+  }
+
+  .nav__menu {
+    left: 0;
+  }
+
+  .home__container {
+    height: 100vh;
+  }
+
+  section {
+    padding: 3rem 0 2rem;
+  }
+
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery__container {
+    grid-template-columns: repeat(3, 1fr);
+  }  
+}
