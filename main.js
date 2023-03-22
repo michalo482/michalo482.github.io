@@ -1,19 +1,19 @@
-/*===== MENU SHOW Y HIDDEN =====*/
+/*===== MENU =====*/
 const navMenu = document.getElementById('nav-menu'),
     toggleMenu = document.getElementById('nav-toggle'),
     closeMenu = document.getElementById('nav-close')
 
-// SHOW
+// Pokaz
 toggleMenu.addEventListener('click', ()=> {
     navMenu.classList.toggle('show')
 })
 
-// HIDDEN
+// Schowaj
 closeMenu.addEventListener('click', ()=> {
     navMenu.classList.remove('show')
 })
 
-/*===== ACTIVE AND REMOVE MENU =====*/
+/*===== Aktywuj/dezaktywuj menu =====*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {
@@ -21,7 +21,7 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
+/*===== SCROLL PO SEKCJACH =====*/
 const sections = document.querySelectorAll('section[id]')
 
 window.addEventListener('scroll', scrollActive)
