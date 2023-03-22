@@ -96,10 +96,9 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*===== CSS DO KLAS ===== */
 .section {
   padding: 4rem 0 2rem;
-  margin-top: 9rem;
 }
 
 .section-title {
@@ -191,17 +190,17 @@ img {
   cursor: pointer;
 }
 
-/*=== Show menu ===*/
+/*=== Pokaz menu ===*/
 .show {
   left: 0;
 }
 
-/*Active menu*/
+/*Aktywacja menu*/
 .active {
   color: var(--text-color);
 }
 
-/*===== HOME =====*/
+/*===== DOMOWA =====*/
 .home__container {
   height: calc(100vh - var(--header-height));
   align-items: center;
@@ -290,9 +289,10 @@ img {
 }
 
 
-/* ===== ABOUT =====*/
+/* ===== O MNIE =====*/
 .about__container {
-  row-gap: 2rem;;
+  row-gap: 2rem;
+  height: calc(90vh - var(--header-height));
 }
 
 .about__data {
@@ -341,9 +341,10 @@ img {
   font-size: var(--small-font-size);
 }
 
-/* ===== SKILLS =====*/
+/* ===== UMIEJETNOSCI =====*/
 .skills__container {
   row-gap: 2rem;
+  height: calc(60vh - var(--header-height));
 }
 
 .skills__subtitle {
@@ -403,11 +404,12 @@ img {
   width: 90%;
 }
 
-
-/* ===== EDUCATION =====*/
+/* ===== EDUKACJA =====*/
 .education__container {
   row-gap: 2rem;
+  
 }
+
 
 .education__content {
   display: grid;
@@ -460,10 +462,14 @@ img {
   transform: translate(5px, -4px);
 }
 
-/* ===== GALLERY =====*/
+/* ===== GALERIA=====*/
 .gallery__container {
   justify-items: center;
   row-gap: 2rem;
+}
+
+.space__container {
+  height: calc(35vh - var(--header-height));
 }
 
 .gallery__img {
@@ -506,7 +512,7 @@ img {
   bottom: 0;
 }
 
-/* ===== CONTACT =====*/
+/* ===== KONTAKT =====*/
 .contact__container {
   row-gap: 3rem;
 }
@@ -551,7 +557,7 @@ img {
   padding: 1rem;
 }
 
-/* ===== FOOTER =====*/
+/* ===== STOPKA =====*/
 .footer {
   background-color: var(--first-color-darken);
   color: var(--first-color-lighten);
@@ -592,7 +598,7 @@ img {
   color: var(--text-color);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* ===== DOSTOSOWANIE DO ROZDZIELCZOSCI =====*/
 @media screen and (min-width: 768px) {
   .home__button{
     width: initial;
@@ -684,4 +690,8 @@ img {
   .gallery__container {
     grid-template-columns: repeat(3, 1fr);
   }  
+
+  .about__img {
+    width: 5000px;
+  }
 }
